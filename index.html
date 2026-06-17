@@ -310,9 +310,10 @@ html,body{height:100%;font-family:'Noto Sans JP',sans-serif;background:var(--bg)
 }
 .mobile-bottom-nav{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:0.5px solid var(--border);padding:6px 0 10px;z-index:100;justify-content:space-around}
 .mob-nav-btn{display:flex;flex-direction:column;align-items:center;gap:2px;border:none;background:transparent;cursor:pointer;font-family:inherit;padding:4px 16px}
-.mob-nav-btn i{font-size:22px;color:var(--muted)}
+.mob-nav-btn i{font-size:22px;color:var(--muted);width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:999px;transition:all 0.15s}
 .mob-nav-btn span{font-size:10px;color:var(--muted)}
-.mob-nav-btn.active i,.mob-nav-btn.active span{color:var(--brand)}
+.mob-nav-btn.active i{color:var(--brand);background:var(--brand-light)}
+.mob-nav-btn.active span{color:var(--brand)}
 </style>
 </head>
 <body>
@@ -327,7 +328,7 @@ html,body{height:100%;font-family:'Noto Sans JP',sans-serif;background:var(--bg)
   <button class="nav-item" onclick="switchView('stats',this)"><i class="ti ti-chart-bar"></i>統計</button>
   <div class="nav-group">設定</div>
   <button class="nav-item" onclick="switchView('settings',this)"><i class="ti ti-adjustments"></i>目標設定</button>
-  <div class="sidebar-footer"><p>第5回課題 MVP</p><p style="margin-top:2px">limekara@gmail.com</p></div>
+  <div class="sidebar-footer"></div>
 </aside>
 
 <div class="main">
